@@ -30,12 +30,12 @@ pip install -r requirements.txt
 ADDING STEPS TO EXECUTE / FIND THE RESULT AS PER THE TASKS LISTED IN THE ASSIGNMENT:
 
 
-## 1. Data Assessment TASK
+## 1. Data Assessment:
     1. Draw a diagram to give a sense of how the different datasets link together ---> FIND ATTACHED DIAGRAM UNDER
     2. Examine each dataset and write down all data quality issues you find. This will require some exploration.
 
 
-## 2. Data Pipelining TASK
+## 2. Data Pipelining:
 
 You can run the Kedro project with:
 
@@ -43,7 +43,8 @@ You can run the Kedro project with:
 kedro run --pipeline=data_engineering
 ```
 
-## 3. Data Testing TASK: 
+
+## 3. Data Testing: 
 
 The test case is written under `src/tests/test_split_symptoms.py` Run the tests as follows:
 
@@ -51,7 +52,7 @@ The test case is written under `src/tests/test_split_symptoms.py` Run the tests 
 pytest src/tests/test_split_symptoms.py
 ```
 
-## 4. Data Analysis TASK:
+## 4. Data Analysis::
 
 Execute a run-all on the notebook listed as data_analysis.ipynb under notebooks folder
 

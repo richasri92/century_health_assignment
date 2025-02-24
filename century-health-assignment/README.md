@@ -59,7 +59,10 @@ pytest src/tests/test_split_symptoms.py
 
 ## 4. Data Analysis:
 
-Added a function validate_dataframe() to validate dataset which outputs as below:
+Added a function validate_dataframe() to validate dataset which outputs dataframe as below:
+
+Execute a run-all on the notebook listed as [data_analysis.ipynb](https://github.com/richasri92/century_health_assignment/blob/main/notebooks/data_analysis.ipynb) under notebooks folder
+
 Following functionalities covered:
 1. Duplicate Rows
 2. Negative Values
@@ -69,6 +72,5 @@ Following functionalities covered:
 
 ![Description of Image](https://github.com/richasri92/century_health_assignment/blob/main/century-health-assignment/data_validation_output_example.png)
 
-Execute a run-all on the notebook listed as [data_analysis.ipynb](https://github.com/richasri92/century_health_assignment/blob/main/notebooks/data_analysis.ipynb) under notebooks folder
 
 

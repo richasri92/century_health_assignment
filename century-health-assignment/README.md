@@ -32,8 +32,8 @@ ADDING STEPS TO EXECUTE / FIND THE RESULT AS PER THE TASKS LISTED IN THE ASSIGNM
 
 ## 1. Data Assessment:
     1. Draw a diagram to give a sense of how the different datasets link together ---> FIND ATTACHED DIAGRAM UNDER
-    2. Examine each dataset and write down all data quality issues you find. -->Please refer [data_inspection.ipynb 
-    [data_inspection.ipynb]([https://example.com](https://github.com/richasri92/century_health_assignment/blob/main/century-health-assignment/notebooks/data_inspection.ipynb))
+    2. Examine each dataset and write down all data quality issues you find. -->Please refer
+    [data_inspection.ipynb](https://github.com/richasri92/century_health_assignment/blob/main/century-health-assignment/notebooks/data_inspection.ipynb)
     notebook under noteboks folder
 
 

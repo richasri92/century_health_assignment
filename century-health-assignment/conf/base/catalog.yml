@@ -156,9 +156,9 @@ analysis_results:
 #   type: kedro_datasets.pandas.ParquetDataSet
 #   filepath: data/03_primary/joined_data.parquet
 
-# symptoms_QC:
-#   type: pandas.CSVDataset
-#   filepath: data/01_raw/symptoms_QC.csv
+symptoms_QC:
+  type: pandas.CSVDataset
+  filepath: data/08_intermediate/symptoms_QC.csv
 
 
 

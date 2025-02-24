@@ -59,7 +59,13 @@ pytest src/tests/test_split_symptoms.py
 
 ## 4. Data Analysis:
 
-Added a function which outputs as below:
+Added a function validate_dataframe() to validate dataset which outputs as below:
+Following functionalities covered:
+1. Duplicate Rows
+2. Negative Values
+3. Missing Values
+4. Outliers - Z_SCORE
+5. Unexpected Categories
 
 ![Description of Image](https://github.com/richasri92/century_health_assignment/blob/main/century-health-assignment/data_validation_output_example.png)
 

@@ -1,0 +1,177 @@
+# Here you can define all your data sets by using simple YAML syntax.
+#
+# Documentation for this file format can be found in "The Data Catalog"
+# Link: https://docs.kedro.org/en/stable/data/data_catalog.html
+#
+# We support interacting with a variety of data stores including local file systems, cloud, network and HDFS
+#
+# An example data set definition can look as follows:
+#
+#bikes:
+#  type: pandas.CSVDataset
+#  filepath: "data/01_raw/bikes.csv"
+#
+#weather:
+#  type: spark.SparkDataset
+#  filepath: s3a://your_bucket/data/01_raw/weather*
+#  file_format: csv
+#  credentials: dev_s3
+#  load_args:
+#    header: True
+#    inferSchema: True
+#  save_args:
+#    sep: '|'
+#    header: True
+#
+#scooters:
+#  type: pandas.SQLTableDataset
+#  credentials: scooters_credentials
+#  table_name: scooters
+#  load_args:
+#    index_col: ['name']
+#    columns: ['name', 'gear']
+#  save_args:
+#    if_exists: 'replace'
+#    # if_exists: 'fail'
+#    # if_exists: 'append'
+#
+# The Data Catalog supports being able to reference the same file using two different Dataset implementations
+# (transcoding), templating and a way to reuse arguments that are frequently repeated. See more here:
+# https://docs.kedro.org/en/stable/data/data_catalog.html
+
+raw_medications:
+  type: pandas.CSVDataset
+  filepath: data/01_raw/medications.csv
+
+raw_patients:
+  type: pandas.CSVDataset
+  filepath: data/01_raw/patients.csv
+  metadata:
+    primary_key: PATIENT_ID
+
+raw_symptoms:
+  type: pandas.CSVDataset
+  filepath: data/01_raw/symptoms.csv
+
+raw_conditions:
+  type: pandas.ExcelDataset
+  filepath: data/01_raw/conditions.xlsx
+  load_args:
+    engine: openpyxl
+
+raw_encounters:
+  type: pandas.ParquetDataset
+  filepath: data/01_raw/encounters.parquet
+  metadata:
+    primary_key: ENCOUNTER_ID
+    foreign_keys:
+      - PATIENT_ID
+
+
+medications:
+  type: pandas.CSVDataset
+  filepath: data/01_raw/medications.csv
+
+patients:
+  type: pandas.CSVDataset
+  filepath: data/01_raw/patients.csv
+  metadata:
+    primary_key: PATIENT_ID
+
+symptoms:
+  type: pandas.CSVDataset
+  filepath: data/01_raw/symptoms.csv
+
+conditions:
+  type: pandas.ExcelDataset
+  filepath: data/01_raw/conditions.xlsx
+  load_args:
+    engine: openpyxl
+
+encounters:
+  type: pandas.ParquetDataset
+  filepath: data/01_raw/encounters.parquet
+  metadata:
+    primary_key: ENCOUNTER_ID
+    foreign_keys:
+      - PATIENT_ID
+
+patients_gender:
+  type: pandas.CSVDataset
+  filepath: data/01_raw/patient_gender.csv
+
+patients_with_gender:
+  type: pandas.CSVDataset
+  filepath: data/01_raw/patients_with_gender.csv
+
+master_df:
+  type: pandas.CSVDataset
+  filepath: data/02_intermediate/master_df.csv
+
+master_df_2:
+  type: pandas.CSVDataset
+  filepath: data/02_intermediate/master_df_2.csv
+
+symptoms_intermediate:
+  type: pandas.CSVDataset
+  filepath: data/02_intermediate/symptoms_intermediate.csv
+
+symptoms_elaborate:
+  type: pandas.CSVDataset
+  filepath: data/02_intermediate/symptoms_elaborate.csv
+
+patients_intermediate:
+  type: pandas.CSVDataset
+  filepath: data/02_intermediate/patients_intermediate.csv
+
+medications_intermediate:
+  type: pandas.CSVDataset
+  filepath: data/02_intermediate/medications_intermediate.csv
+
+conditions_intermediate:
+  type: pandas.CSVDataset
+  filepath: data/02_intermediate/conditions_intermediate.csv
+
+encounters_intermediate:
+  type: pandas.CSVDataset
+  filepath: data/02_intermediate/encounters_intermediate.csv
+
+medication_plot:
+  type: kedro_datasets.pillow.ImageDataset
+  filepath: data/08_reporting/medication_plot.png
+
+race_gender_pie:
+  type: kedro_datasets.pillow.ImageDataset
+  filepath: data/08_reporting/race_gender_pie_plot.png
+
+analysis_results:
+  type: pickle.PickleDataset
+  filepath: data/08_reporting/analysis_results.pkl
+
+# er_diagram_file:
+#   type: kedro_datasets.pillow.ImageDataset
+#   filepath: data/er_diagram.png
+
+# joined_data:
+#   type: kedro_datasets.pandas.ParquetDataSet
+#   filepath: data/03_primary/joined_data.parquet
+
+# symptoms_QC:
+#   type: pandas.CSVDataset
+#   filepath: data/01_raw/symptoms_QC.csv
+
+
+
+# preprocessed_shuttles:
+#   type: pandas.ParquetDataset
+#   filepath: data/02_intermediate/preprocessed_shuttles.parquet
+
+
+# model_input_table:
+#   type: pandas.ParquetDataset
+#   filepath: data/03_primary/model_input_table.parquet
+
+# regressor:
+#   type: pickle.PickleDataset
+#   filepath: data/06_models/regressor.pickle
+#   versioned: true

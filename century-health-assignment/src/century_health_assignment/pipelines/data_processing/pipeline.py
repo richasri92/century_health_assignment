@@ -57,20 +57,20 @@ def create_pipeline(**kwargs) -> Pipeline:
                 name = "create_master_dataset"
             ),
             
-            # ANALYSE PATIENT DATA:
-            node(
-                func = analyze_patient_data,
-                inputs = ["patients_with_gender", "medications"],
-                outputs="analysis_results",
-                name="analyze_patient_data_node"
-            )
+            # # ANALYSE PATIENT DATA:
+            # node(
+            #     func = analyze_patient_data,
+            #     inputs = ["patients_with_gender", "medications"],
+            #     outputs="analysis_results",
+            #     name="analyze_patient_data_node"
+            # ),
             
-        #     node(
-        #         func=validate_dataframe,
-        #         inputs="symptoms",
-        #         outputs="symptoms_QC",
-        #         name="validate_dataframe_symptoms",
-        #     ),
+            # node(
+            #     func=validate_dataframe,
+            #     inputs="symptoms",
+            #     outputs="symptoms_QC",
+            #     name="validate_dataframe_symptoms",
+            # ),
 
             
         #     node(

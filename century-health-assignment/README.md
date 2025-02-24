@@ -32,7 +32,8 @@ ADDING STEPS TO EXECUTE / FIND THE RESULT AS PER THE TASKS LISTED IN THE ASSIGNM
 
 ## 1. Data Assessment:
 #### Draw a Diagram  
-To understand how different datasets link together, refer to the attached diagram.
+[View ER Diagram](https://github.com/richasri92/century_health_assignment/blob/main/century-health-assignment/ER-diagram.pdf)
+
 
 #### Data Inspection and Quality Issues  
 Please refer to [data_inspection.ipynb](notebooks/data_inspection.ipynb) for details.

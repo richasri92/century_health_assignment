@@ -27,74 +27,32 @@ To install them, run:
 pip install -r requirements.txt
 ```
 
-## How to run your Kedro pipeline
+ADDING STEPS TO EXECUTE / FIND THE RESULT AS PER THE TASKS LISTED IN THE ASSIGNMENT:
 
-You can run your Kedro project with:
 
-```
-kedro run
-```
+## 1. Data Assessment TASK
+    1. Draw a diagram to give a sense of how the different datasets link together ---> FIND ATTACHED DIAGRAM UNDER
+    2. Examine each dataset and write down all data quality issues you find. This will require some exploration.
 
-## How to test your Kedro project
 
-Have a look at the files `src/tests/test_run.py` and `src/tests/pipelines/data_science/test_pipeline.py` for instructions on how to write your tests. Run the tests as follows:
+## 2. Data Pipelining TASK
 
-```
-pytest
-```
-
-To configure the coverage threshold, look at the `.coveragerc` file.
-
-## Project dependencies
-
-To see and update the dependency requirements for your project use `requirements.txt`. You can install the project requirements with `pip install -r requirements.txt`.
-
-[Further information about project dependencies](https://docs.kedro.org/en/stable/kedro_project_setup/dependencies.html#project-specific-dependencies)
-
-## How to work with Kedro and notebooks
-
-> Note: Using `kedro jupyter` or `kedro ipython` to run your notebook provides these variables in scope: `catalog`, `context`, `pipelines` and `session`.
->
-> Jupyter, JupyterLab, and IPython are already included in the project requirements by default, so once you have run `pip install -r requirements.txt` you will not need to take any extra steps before you use them.
-
-### Jupyter
-To use Jupyter notebooks in your Kedro project, you need to install Jupyter:
+You can run the Kedro project with:
 
 ```
-pip install jupyter
+kedro run --pipeline=data_engineering
 ```
 
-After installing Jupyter, you can start a local notebook server:
+## 3. Data Testing TASK: 
+
+The test case is written under `src/tests/test_split_symptoms.py` Run the tests as follows:
 
 ```
-kedro jupyter notebook
+pytest src/tests/test_split_symptoms.py
 ```
 
-### JupyterLab
-To use JupyterLab, you need to install it:
+## 4. Data Analysis TASK:
 
-```
-pip install jupyterlab
-```
+Execute a run-all on the notebook listed as data_analysis.ipynb under notebooks folder
 
-You can also start JupyterLab:
 
-```
-kedro jupyter lab
-```
-
-### IPython
-And if you want to run an IPython session:
-
-```
-kedro ipython
-```
-
-### How to ignore notebook output cells in `git`
-To automatically strip out all output cell contents before committing to `git`, you can use tools like [`nbstripout`](https://github.com/kynan/nbstripout). For example, you can add a hook in `.git/config` with `nbstripout --install`. This will run `nbstripout` before anything is committed to `git`.
-
-> *Note:* Your output cells will be retained locally.
-
-## Package your Kedro project
-
-[Further information about building project documentation and packaging your project](https://docs.kedro.org/en/stable/tutorial/package_a_project.html)

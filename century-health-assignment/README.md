@@ -31,9 +31,12 @@ ADDING STEPS TO EXECUTE / FIND THE RESULT AS PER THE TASKS LISTED IN THE ASSIGNM
 
 
 ## 1. Data Assessment:
-    1. Draw a diagram to give a sense of how the different datasets link together ---> FIND ATTACHED DIAGRAM UNDER
-    2. ## Data Inspection and Quality Issues  
-       Please refer to [data_inspection.ipynb](https://github.com/richasri92/century_health_assignment/blob/main/notebooks/data_inspection.ipynb) for details.
+#### Draw a Diagram  
+To understand how different datasets link together, refer to the attached diagram.
+
+#### Data Inspection and Quality Issues  
+Please refer to [data_inspection.ipynb](notebooks/data_inspection.ipynb) for details.
+
 
 
 ## 2. Data Pipelining:

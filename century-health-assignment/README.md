@@ -57,6 +57,6 @@ pytest src/tests/test_split_symptoms.py
 
 ## 4. Data Analysis::
 
-Execute a run-all on the notebook listed as data_analysis.ipynb under notebooks folder
+Execute a run-all on the notebook listed as [data_analysis.ipynb](https://github.com/richasri92/century_health_assignment/blob/main/notebooks/data_analysis.ipynb) under notebooks folder
 
 
